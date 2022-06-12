@@ -1,0 +1,25 @@
+:host ::ng-deep {
+    .p-menubar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        margin: 0.5rem 1rem !important; 
+        font-size: 1.1rem;
+    }
+
+    .p-menubar .p-menubar-custom, .p-menubar .p-menubar-end {
+        margin-left: inherit;
+        align-self: auto;
+        
+    }
+
+    button.p-element.p-button-outlined.p-button.p-component {
+        font-weight: 500 ;
+    }
+} 
+
+
+
+

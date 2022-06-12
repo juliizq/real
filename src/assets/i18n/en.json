@@ -1,0 +1,41 @@
+{
+    "login":{
+        "title": "Welcome back",
+        "subtitle": "LETS FIND SOMETHING BEAUTIFUL FOR YOU",
+        "sign_in" : "Sign in",
+        "password" : "Password",
+        "forgot_password" : "Forgot password",
+        "have_account" : "Don't have an account yet",
+        "create_account": "Create account",
+        "errors": {
+            "unauthorize" : "Your email or password is incorrect."
+        }
+    },
+    "sign_up": {
+        "title" : "Nice to meet you",
+        "subtitle" : "LETS FIND SOMETHING BEAUTIFUL FOR YOU",
+        "sign_up" : "Sign up",
+        "first_name" : "First name",
+        "last_name" : "Last name",
+        "password" : "Password",
+        "create_account" :  "Create account",
+        "have_account" : "Have an account already",
+        "log_in" : "Log in"
+    },
+    "forgot_password":{
+        "title": "Welcome back",
+        "subtitle": "LETS FIND SOMETHING BEAUTIFUL FOR YOU",
+        "forgot_password" : "Forgot your password",
+        "forgot_subtitle" : "Enter the email you used to sign up with and we'll send a link to reset your password.",
+        "reset" : "Reset",
+        "go_back"  : "Go back to",
+        "sign_in" : "sign in"
+    },
+    "forgot_password_success" : {
+        "success" : "Success",
+        "success_message" : "If there's an account associated with the provided email, you'll receive an email with password reset instructions shortly."
+    },
+    "header" : { 
+        "how_it_works" : "HOW IT WORKS"
+    }
+}

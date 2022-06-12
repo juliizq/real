@@ -1,0 +1,15 @@
+<div class="user-tools">
+    <!-- <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="text" class="p-inputtext-sm" pInputText placeholder="Search"/>
+    </span> -->
+
+    
+    <p-tieredMenu #menu [model]="profileItems" [popup]="true"></p-tieredMenu>
+    <i class="pi pi-user" (click)="menu.toggle($event)" pTooltip="My Profile" tooltipPosition="bottom"></i>
+
+
+    <i class="pi pi-heart" pTooltip="My Likes" tooltipPosition="bottom"></i>
+    <i (click)="logout()" class="pi pi-sign-out" pTooltip="Sign out" tooltipPosition="bottom"></i>
+</div>
+

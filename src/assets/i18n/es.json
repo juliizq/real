@@ -1,0 +1,43 @@
+{
+    "login": {
+        "title": "Bienvenido devuelta",
+        "subtitle": "ENCONTREMOS ALGO HERMOSO PARA TI",
+        "sign_in" : "Iniciar sesión",
+        "password" : "Contraseña",
+        "forgot_password" : "Olvidó su contraseña",
+        "have_account" : "Todavía no tienes una cuenta",
+        "create_account": "Crear cuenta",
+        "errors": {
+            "unauthorize" : "Su email o contraseña es incorrecta."
+        }
+    },
+    "sign_up": {
+        "title" : "Gusto en conocerte",
+        "subtitle" : "ENCONTREMOS ALGO HERMOSO PARA TI",
+        "sign_up" : "Registrarse",
+        "first_name" : "Nombre",
+        "last_name" : "Apellido",
+        "password" : "Contraseña",
+        "create_account" : "Crear cuenta",
+        "have_account" : "Ya tienes una cuenta",
+        "log_in" : "Iniciar sesión"
+    },
+    "forgot_password":{
+        "title": "Bienvenido devuelta",
+        "subtitle": "ENCONTREMOS ALGO HERMOSO PARA TI",
+        "forgot_password" : "Olvidaste tu contraseña",
+        "forgot_subtitle" : "Ingresa el correo electrónico con el que te registraste y te enviaremos un enlace para restablecer tu contraseña.",
+        "reset" : "Restablecer",
+        "go_back"  : "Regresar a",
+        "sign_in" : "iniciar sesión"
+    },
+    "forgot_password_success" : {
+        "success" : "Enviado con éxito",
+        "success_message" : "Si hay una cuenta asociada con el correo electrónico proporcionado, recibirá un correo electrónico con instrucciones de restablecimiento de contraseña en breve."
+
+    },
+    "header" : { 
+        "how_it_works" : "CÓMO FUNCIONA"
+        
+    }
+}

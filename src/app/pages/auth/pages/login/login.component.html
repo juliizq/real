@@ -1,0 +1,64 @@
+<div class="container-sign-up w-full max-h-full">
+    <div class="grid w-screen h-screen ">
+
+        <div class="left hidden lg:col-4 xl:col-4 lg:flex xl:flex flex-column text-white align-items-center">
+            <div class="sign-up-text flex-1 flex flex-column justify-content-center">
+                <p class="text-2xl font-light">{{'login.title' | translate}}</p>
+                <p class="text-3xl"> {{'login.subtitle' | translate}} !</p>
+            </div>
+            <div class="image-heroe">
+                <img src="assets/heroes/photo-1530011940847-04cba36df39f.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="right flex-1">
+            <div class="logo"> <img src="/assets/logo/logo-real-black.png" height="40" width="85" class="p-mr-2" alt="brand logo"> </div>
+
+            <div class="container-form flex justify-content-center flex-column align-items-center ">
+                <div *ngIf="error" class="container-error-message flex align-items-center justify-content-center">
+                    <i class="pi pi-times"></i>
+                    <p class="font-normal">
+                        <span class="font-medium">{{ error | translate}} </span>
+                    </p>
+                </div>
+                <form class="form-sign-up" [formGroup]="loginForm" (ngSubmit)="loginUser()" >
+                    <h3 class="text-2xl font-medium">{{'login.sign_in' | translate}}</h3>
+
+                    <p>Email</p>
+                    <input formControlName="email" type="email" pInputText required >
+
+                    <p>{{'login.password' | translate}}</p>
+                    <p-password type="password" formControlName="password" styleClass="p-password p-component p-inputwrapper p-input-icon-right" [feedback]="false" [toggleMask]="true"></p-password>
+
+                    <div class="container-forgot-password flex justify-content-end ">
+                        <a href="#" routerLink="/forgot-password" class="font-normal underline text-primary">{{'login.forgot_password' | translate}}?</a>
+                    </div>
+
+                    <div class="container-button">
+                        <p-button [disabled]="!loginForm.valid" type="submit" label="{{'login.sign_in' | translate}}"></p-button>
+                    </div>
+
+                    <div class="container-login flex justify-content-end">
+                        <a href="#" routerLink="/register" class="font-normal text-primary no-underline">{{'login.have_account' | translate}}? <span class="underline">{{'login.create_account' | translate}}</span></a>
+                    </div>
+                    
+                </form>
+
+            </div>
+
+            <!-- Language selection
+         <div>
+                <ul>
+                    <li (click)="onChangeLanguage('en')">EN</li>
+                    <li (click)="onChangeLanguage('es')">ES</li>
+                </ul>
+            </div> -->
+            
+        </div>
+        
+       
+    </div>
+</div>
+
+
+

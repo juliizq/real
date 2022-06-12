@@ -1,0 +1,84 @@
+.grid{
+    margin: 0 !important;
+}
+
+.left {
+    background-color: #9747FF;
+    width: 460px;
+    padding: 0 !important;
+
+    
+    .sign-up-text {
+        padding: 1.1rem;
+
+        p {
+            margin: 0;
+            padding-bottom: 15px;
+        }
+    }
+
+    .image-heroe {
+
+        img {
+            object-fit: cover;
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.cormorant {
+    font-family: Cormorant;
+}
+
+.right{
+    padding: 2rem;
+
+}
+
+.container-form{
+    height: 90%;
+    .form-sign-up{
+        flex-direction: column !important;
+        h3 {
+            margin-bottom: 25px;
+        }
+
+        input{
+            width: 23rem !important;
+            font-weight: 200;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .container-login{
+            margin-top: 10px;
+            font-size: 0.80rem;
+        }
+
+        .container-button{
+            margin-top: 25px;
+        }
+
+    }
+}
+
+:host {
+    ::ng-deep {
+        
+        input.p-inputtext.p-component.p-element {
+            width: 23rem;
+            font-weight: 200;
+        }
+
+        button.p-ripple.p-element.p-button.p-component {
+            width: 23rem;
+        }
+
+    }
+}
+
+
+

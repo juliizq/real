@@ -1,0 +1,16 @@
+<div class="container-footer">
+    <span> Made with  <i class="pi pi-heart-fill"></i>  by Juliana. </span>
+
+    <div>
+        <!-- Language selection -->
+        <div>
+            <p-cascadeSelect [(ngModel)]="selectedLanguage" [options]="languages" optionGroupLabel="name"
+	           [style]="{'minWidth': '14rem'}" placeholder="EN">
+            </p-cascadeSelect>
+            <ul>
+                <li (click)="onChangeLanguage('en')">EN</li>
+                <li (click)="onChangeLanguage('es')">ES</li>
+            </ul>
+        </div> 
+    </div>
+</div>
