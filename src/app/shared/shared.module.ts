@@ -11,7 +11,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { SharedModule as SharedModuleNgPrime } from "primeng/api";
 import {TieredMenuModule} from 'primeng/tieredmenu';
 import {TooltipModule} from 'primeng/tooltip';
-import {CascadeSelectModule} from 'primeng/cascadeselect';
+import {DropdownModule} from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 
 
@@ -31,7 +31,7 @@ import { FormsModule } from '@angular/forms';
     SharedModuleNgPrime,
     TieredMenuModule,
     TooltipModule,
-    CascadeSelectModule,
+    DropdownModule,
     FormsModule
  ],
   exports: [

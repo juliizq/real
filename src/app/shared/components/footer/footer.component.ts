@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 
+export interface LanguageI{
+  name : string; 
+  value : string; 
+}
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -9,25 +14,23 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class FooterComponent implements OnInit {
 
-  languages!: any[];
-  selectedLanguage: any;
+  languages: LanguageI[]  = [
+    { name : "EN", value :  'en' },
+    { name : "ES", value :  'es' }
+  ]
+  selectedLanguage!: LanguageI;
 
 
   constructor(public _translate: TranslateService) { }
 
   ngOnInit(): void {
-
-    this.languages = [
-      {name : "EN"},
-      {name : "ES"}
-    ]
+    this.selectedLanguage = this.languages.find((lang) => lang.value === this._translate.getDefaultLang()) as LanguageI;
   }
 
-  onChangeLanguage(language : string){
-    this._translate.setDefaultLang(language);
-    this._translate.use(language);
-    localStorage.setItem('language', language);
-    console.log('language:', language)
+  onChangeLanguage(){
+    this._translate.setDefaultLang(this.selectedLanguage.value);
+    this._translate.use(this.selectedLanguage.value);
+    localStorage.setItem('language', this.selectedLanguage.value);
   }
   
 

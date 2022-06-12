@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { MenuItem } from 'primeng/api';
+import { Subscription } from 'rxjs';
 import { User } from '../../../models/user.model';
 import { AuthService } from '../../../pages/auth/services/auth.service';
 
@@ -10,23 +11,30 @@ import { AuthService } from '../../../pages/auth/services/auth.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   user: User | undefined;
   items!: MenuItem[];
+  subscriptionUser!: Subscription;
+  subscriptionLanguage!: Subscription;
   
   constructor(private authService : AuthService, private translate: TranslateService) { 
-    this.authService.user.subscribe(x => this.user = x as User);
-    this.translate.onLangChange.subscribe((event: LangChangeEvent)=>{
+    this.subscriptionUser = this.authService.user.subscribe(x => this.user = x as User);
+    this.subscriptionLanguage = this.translate.onLangChange.subscribe((event: LangChangeEvent)=>{
       this.renderMenuItem();
     })
   }
 
   ngOnInit(): void {
-
     this.renderMenuItem();
-   
   }
+
+  ngOnDestroy() {
+    // prevent memory leak when component destroyed
+    this.subscriptionUser.unsubscribe();
+    this.subscriptionLanguage.unsubscribe();
+  }
+ 
 
   renderMenuItem(){
     this.translate.get('header').subscribe((headerlabels: any) => {
