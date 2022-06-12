@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { first } from 'rxjs';
+import { RoutingStateService } from 'src/app/shared/services/routing-state.service';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class LogInComponent implements OnInit {
   error :  string =  '';
   
 
-  constructor(public _translate: TranslateService, private _router: Router, private _authService : AuthService, private _route: ActivatedRoute,
+  constructor(public _translate: TranslateService, private _router: Router, private _authService : AuthService, private _routingStateService: RoutingStateService,
     private _formBuilder: FormBuilder) {
       // redirect to home if already logged in
       if (this._authService.currentUser) { 
@@ -35,7 +36,7 @@ export class LogInComponent implements OnInit {
     });
 
     // get return url from route parameters or default to '/'
-    this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/home';
+    this.returnUrl = this._routingStateService.getReturnUrl() || '/home';
   }
 
 

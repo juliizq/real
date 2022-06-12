@@ -1,6 +1,6 @@
 <p-menubar [model]="items">
     <ng-template pTemplate="start">
-        <img src="/assets/logo/logo-real-black.png" height="40" width="85" class="p-mr-2" alt="brand logo">    
+        <img routerLink="" src="/assets/logo/logo-real-black.png" height="40" width="85" class="p-mr-2" alt="brand logo">    
       </ng-template>
       <ng-template pTemplate="end">
         <app-header-connected *ngIf="user; else publicTemplate"></app-header-connected>

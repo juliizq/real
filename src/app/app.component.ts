@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import {MenuItem} from 'primeng/api';
 import { AuthService } from './pages/auth/services/auth.service';
+import { RoutingStateService } from './shared/services/routing-state.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { AuthService } from './pages/auth/services/auth.service';
 export class AppComponent {
   title = 'real';
 
-  constructor(translate: TranslateService, private authService : AuthService) {
+  constructor(translate: TranslateService, private authService : AuthService, private routingStateService : RoutingStateService) {
     translate.addLangs(['en', 'es']);
     const language = localStorage.getItem('language');
     if(language && translate.getLangs().includes(language)){
@@ -26,5 +27,7 @@ export class AppComponent {
     if(this.authService.isTokenValid()){
       this.authService.refreshToken().subscribe();
     }
+
+    this.routingStateService.initRoutingState();
   }
 }
