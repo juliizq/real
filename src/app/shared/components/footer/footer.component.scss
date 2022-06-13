@@ -4,4 +4,18 @@ span {
 
 .container-footer{
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-made {
+    display: flex;
+    flex: 7;
+    justify-content: flex-end;
+}
+.container-languages{
+    display: flex;
+   flex: 5;
+   justify-content: flex-end;
 }

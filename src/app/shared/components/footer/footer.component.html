@@ -1,7 +1,11 @@
 <div class="container-footer">
-    <span> Made with  <i class="pi pi-heart-fill"></i>  by Juliana. </span>
 
-    <div>
+    <div class="container-made">
+        <span> Made with  <i class="pi pi-heart-fill"></i>  by Juliana. </span>
+    </div>
+    
+
+    <div class="container-languages">
         <!-- Language selection -->
         <div>
             <p-dropdown [options]="languages" [(ngModel)]="selectedLanguage" (onChange)="onChangeLanguage()" optionLabel="name" ></p-dropdown>
