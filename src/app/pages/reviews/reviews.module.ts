@@ -12,6 +12,12 @@ import {InputTextModule} from 'primeng/inputtext';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReviewsHeaderComponent } from './components/reviews-header/reviews-header.component';
 import { ReviewsMainComponent } from './components/reviews-main/reviews-main.component';
+import { CardReviewComponent } from './components/card-review/card-review.component';
+import {CardModule} from 'primeng/card';
+import {AvatarModule} from 'primeng/avatar';
+import {RatingModule} from 'primeng/rating';
+
+
 
 
 
@@ -20,6 +26,7 @@ import { ReviewsMainComponent } from './components/reviews-main/reviews-main.com
     ReviewsComponent,
     ReviewsHeaderComponent,
     ReviewsMainComponent,
+    CardReviewComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +38,10 @@ import { ReviewsMainComponent } from './components/reviews-main/reviews-main.com
     CascadeSelectModule,
     ButtonModule,
     InputTextModule,
-    SharedModule
-  ]
+    SharedModule,
+    CardModule,
+    AvatarModule,
+    RatingModule
+    ]
 })
 export class ReviewsModule { }

@@ -14,6 +14,10 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CascadeSelectModule} from 'primeng/cascadeselect';
 import { FormsModule } from '@angular/forms';
+import {CardModule} from 'primeng/card';
+import {AvatarModule} from 'primeng/avatar';
+import {RatingModule} from 'primeng/rating';
+
 
 
 // AoT requires an exported function for factories
@@ -43,7 +47,10 @@ export function HttpLoaderFactory(http: HttpClient) {
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }}),
-      FormsModule
+      FormsModule,
+      CardModule,
+      AvatarModule,
+      RatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
