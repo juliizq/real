@@ -1,0 +1,54 @@
+<div class="container-card grid">
+    <p-card>
+        <div class="card-header">
+            <p>T-shirt basic LEVIS</p>
+        </div>
+
+        <div class="card-image">
+            <img src="/assets/heroes/person.jpeg" alt="">
+        </div>
+        
+        <div class="container-user-information p-1">
+            <div class="user-information flex flex-row align-items-center justify-content-start">
+                <p-avatar styleClass="p-mr-2" size="large" shape="circle" image="/assets/heroes/allgo-an-app-for-plus-size-people-gSPPwuoiGtU-unsplash.jpeg"></p-avatar>
+                <div class="m-2">
+                    <div class="flex align-items-center">
+                        <p class="text-sm">Luciana</p>
+                        <p class="text-xs m-1 text-600">(3 reviews)</p>
+                    </div>
+                    <div class="">
+                        <p class="info-user text-xs text-600"> Size : XL | 70kg | 167cm </p>
+                    </div>
+                </div>
+            </div>
+            <div class="user-review-information">
+                <div class="user-comment-review">
+                    <p class="text-sm">Very confy and cute.</p>
+                </div>
+                <div class="user-ratings mt-2">
+                    <div class="grid m-0">
+                        <div class="col-6 p-0">
+                            <p class="rating-type text-xs">Globally</p>
+                            <p-rating [ngModel]="valueRating" [readonly]="true" [stars]="5" [cancel]="false"></p-rating>
+                        </div>
+                        <div class="col-6 p-0">
+                            <p class="rating-type text-xs">Real to size</p>
+                            <p-rating [ngModel]="valueRating" [readonly]="true" [stars]="5" [cancel]="false"></p-rating>
+                        </div>
+                        <div class="col-6 p-0">
+                            <p class="rating-type text-xs">Breast</p>
+                            <p-rating [ngModel]="valueRating" [readonly]="true" [stars]="5" [cancel]="false"></p-rating>
+                        </div>
+                        <div class="col-6 p-0">
+                            <p class="rating-type text-xs">Belly</p>
+                            <p-rating [ngModel]="valueRating" [readonly]="true" [stars]="5" [cancel]="false"></p-rating>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </p-card>
+</div>
+
+
