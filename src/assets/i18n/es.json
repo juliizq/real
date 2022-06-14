@@ -39,5 +39,9 @@
     "header" : { 
         "how_it_works" : "CÓMO FUNCIONA"
         
+    },
+    "home_main" : {
+        "subtitle" : "Descubre reseñas de ropa hecha por cuerpos reales y encuentra marcas y tallas adecuadas para ti!",
+        "start_now" : "Comenzar ahora"
     }
 }
