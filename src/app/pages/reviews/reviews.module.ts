@@ -41,7 +41,7 @@ import {RatingModule} from 'primeng/rating';
     SharedModule,
     CardModule,
     AvatarModule,
-    RatingModule
-    ]
+    RatingModule    
+  ]
 })
 export class ReviewsModule { }

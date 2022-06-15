@@ -9,7 +9,10 @@
         </div>
 
         <div class="cards-reviews-grid">
-            <app-card-review></app-card-review>
+            <div class="container-reviews" *ngFor="let review of reviews">
+                <app-card-review [review]="review"></app-card-review>
+            </div>
+           
         </div>
     </div>
 </div>

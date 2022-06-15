@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
+import { Review } from 'src/app/models/review.model';
 
 @Component({
   selector: 'app-card-review',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardReviewComponent implements OnInit {
 
-  valueRating : number = 3;
+  value : number = 3;
+
+  @Input() review!: Review;
+
   
   constructor() { }
 
