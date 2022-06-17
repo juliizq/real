@@ -16,6 +16,7 @@ import { CardReviewComponent } from './components/card-review/card-review.compon
 import {CardModule} from 'primeng/card';
 import {AvatarModule} from 'primeng/avatar';
 import {RatingModule} from 'primeng/rating';
+import {BreadcrumbModule} from 'primeng/breadcrumb';
 
 
 
@@ -41,7 +42,8 @@ import {RatingModule} from 'primeng/rating';
     SharedModule,
     CardModule,
     AvatarModule,
-    RatingModule    
+    RatingModule,
+    BreadcrumbModule 
   ]
 })
 export class ReviewsModule { }

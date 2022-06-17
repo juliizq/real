@@ -1,4 +1,7 @@
 :host ::ng-deep {
+    .p-menubar {
+        padding: 0rem !important;
+    }
     .p-menubar-end.ng-star-inserted  {
         display: flex;
     }

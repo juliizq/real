@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import {CardModule} from 'primeng/card';
 import {AvatarModule} from 'primeng/avatar';
 import {RatingModule} from 'primeng/rating';
+import {BreadcrumbModule} from 'primeng/breadcrumb';
 
 
 
@@ -51,6 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       CardModule,
       AvatarModule,
       RatingModule,
+      BreadcrumbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

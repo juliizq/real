@@ -1894,8 +1894,8 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 .p-button.p-button-outlined:enabled:hover {
   background: #f9f9f9;
-  color:  #060606;
-  border: 1px solid c;
+  color:  #8628ff;
+  border: 1px solid ;
 }
 .p-button.p-button-outlined:enabled:active {
   background: #efefef;
@@ -4602,7 +4602,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 
 .p-breadcrumb {
-  background: #efefef;
+  background: transparent;
   border: 0 none;
   border-radius: 4px;
   padding: 1rem;

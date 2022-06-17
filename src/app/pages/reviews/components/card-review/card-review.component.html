@@ -1,7 +1,6 @@
-<div class="container-card grid">
-    <p-card>
+<p-card class="">
         <div class="card-header">
-            <p>T-shirt basic LEVIS</p>
+            <p>{{review.product.name}}</p>
         </div>
 
         <div class="card-image">
@@ -13,8 +12,8 @@
                 <p-avatar styleClass="p-mr-2" size="large" shape="circle" image="/assets/heroes/allgo-an-app-for-plus-size-people-gSPPwuoiGtU-unsplash.jpeg"></p-avatar>
                 <div class="m-2">
                     <div class="flex align-items-center">
-                        <p class="text-sm">Luciana</p>
-                        <p class="text-xs m-1 text-600">(3 reviews)</p>
+                        <p class="text-sm">{{review.user.firstName}}</p>
+                        <p class="text-xs m-1 text-600">({{review.user.totalReview}} reviews)</p>
                     </div>
                     <div class="">
                         <p class="info-user text-xs text-600"> Size : XL | 70kg | 167cm </p>
@@ -23,7 +22,7 @@
             </div>
             <div class="user-review-information">
                 <div class="user-comment-review">
-                    <p class="text-sm">Very confy and cute.</p>
+                    <p class="text-sm">{{review.comment}}</p>
                 </div>
                 <div class="user-ratings mt-2">
                     <div class="grid m-0">
@@ -49,6 +48,3 @@
             
         </div>
     </p-card>
-</div>
-
-

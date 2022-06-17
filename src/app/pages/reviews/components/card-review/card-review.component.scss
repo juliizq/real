@@ -1,18 +1,18 @@
 :host ::ng-deep {
-    .container-card{
-        .p-card .p-card-content {
+    .p-card .p-card-content {
         padding: 0 !important;
     }
+
 
     .p-card-body{
         padding: 0 !important;
     }
 
     .p-card-content{
-        width: 230px;
-        height: 480px;
+        width: 250px;
+        height: auto;
         max-width: 250px;
-        max-height: 480px;
+        max-height: 700px;
         background-color: #d9d9d929;
     }
 
@@ -57,9 +57,7 @@
         .user-review-information{
             margin-left: 56px;
 
-            .user-comment-review{
-                max-height: 20px;
-            }
+            
 
             .user-ratings{
                 .grid{
@@ -74,5 +72,5 @@
         }
     }
 }
-}
+
     
