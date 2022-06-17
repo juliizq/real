@@ -1,4 +1,5 @@
 import { Product } from './product.model';
+import { User } from './user.model';
 
 export class Review{
     id!: number
@@ -9,6 +10,7 @@ export class Review{
     product!: Product;
     userId! : number;
     productId! : number;
+    user! : User;
 
     constructor(){
 
@@ -23,10 +25,16 @@ export class Review{
         this.userId = json.userId;
         this.productId = json.productId
 
-        if('product' in json){
+        if('Product' in json){
             const product = new Product();
-            product.fromJson(json.product);
+            product.fromJson(json.Product);
             this.product = product
+        }
+
+        if('User' in json){
+            const user = new User();
+            user.fromJson(json.User);
+            this.user = user
         }
 
     }
