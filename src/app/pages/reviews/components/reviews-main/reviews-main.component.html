@@ -1,15 +1,15 @@
-<div class="reviews-main flex">
+<div class="reviews-main flex flex-row">
     <div class="container-left flex-none mr-7">
         <div class="column-clothes-type">
-            <ul>
-                <li>T-SHIRT</li>
+            <ul class="flex flex-column align-items-center">
+                <li class="font-medium">T-SHIRT</li>
                 <li>All</li>
                 <li>Basics</li>
             </ul>
         </div>
     </div>
     <div class="container-right flex-grow-1">
-        <div class="container-tools flex align-items-center justify-content-between mb-2">
+        <div class="container-tools flex align-items-center justify-content-between mb-2 mt-2">
             <div class="breadcrumb">
                 <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
             </div>
@@ -17,10 +17,10 @@
                 <button pButton pRipple routerLink="/" type="button" label="" class="button-add-review p-button-outlined font-medium">ADD REVIEW <i class="pi pi-plus-circle ml-1"> </i></button>
             </div>
         </div>
-
-        <div class="cards-reviews-grid flex flex-row flex-wrap justify-content-start gap-3" >
-            <div class="container-reviews" *ngFor="let review of reviews">
-                <app-card-review [review]="review" class="flex"></app-card-review>
+<!-- flex flex-row flex-wrap justify-content-start gap-3 align-items-start -->
+        <div class="cards-reviews-grid flex flex-wrap justify-content-center  md:justify-content-center lg:justify-content-start xl:justify-content-start" >
+            <div class="container-reviews m-2" *ngFor="let review of reviews">
+                <app-card-review [review]="review" class=""></app-card-review>
             </div>
            
         </div>

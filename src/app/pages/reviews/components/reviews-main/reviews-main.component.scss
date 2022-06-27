@@ -4,4 +4,38 @@
         border: none;
     }
 
+    // .cards-reviews-grid {
+    //     column-count: 3;
+    //     column-gap: 0;
+    //     padding: 10px;
+    // }
+
+    .column-clothes-type{
+        margin-top: 5rem;
+        ul{
+            list-style: none;
+
+            li{
+                margin-bottom: 8px;
+            }
+        }
+        
+    }
+
+    .p-breadcrumb{
+        font-weight: 500;
+        padding: 0rem !important;
+    }
+
+}
+
+
+@media (min-width: 992px){
+    
+}
+
+@media only screen and (max-width: 992px){
+    .container-left{
+        display: none;
+    }
 }
