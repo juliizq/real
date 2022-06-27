@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   items!: MenuItem[];
   subscriptionUser!: Subscription;
   subscriptionLanguage!: Subscription;
+  visibleSidebar: any;
   
   constructor(private authService : AuthService, private translate: TranslateService) { 
     this.subscriptionUser = this.authService.user.subscribe(x => this.user = x as User);
@@ -41,7 +42,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
       console.log('headerlabels:', headerlabels)
       this.items = [
       {label:headerlabels.how_it_works},
-      {label:'REVIEWS', routerLink: ['/reviews']}
+      {label:'REVIEWS', routerLink: ['/reviews']},
+      // {label : 'LOGIN', routerLink: ['/login']},
+      // {label : 'REGISTER', routerLink: ['/register']}
     ];
       //=> 'hello world'
   });

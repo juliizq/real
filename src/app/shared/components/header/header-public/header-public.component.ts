@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
  
 @Component({
   selector: 'app-header-public',
@@ -8,13 +7,9 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderPublicComponent implements OnInit {
 
-  items!: MenuItem[];
 
   ngOnInit(): void {
-    this.items = [
-      {label:'HOW IT WORKS'},
-      {label:'REVIEWS'},
-    ];
+
   }
 }
 

@@ -13,6 +13,7 @@ import {TieredMenuModule} from 'primeng/tieredmenu';
 import {TooltipModule} from 'primeng/tooltip';
 import {DropdownModule} from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
+import {SidebarModule} from 'primeng/sidebar';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     TieredMenuModule,
     TooltipModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    SidebarModule
  ],
   exports: [
     CommonModule,
