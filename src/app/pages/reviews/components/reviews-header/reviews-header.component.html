@@ -1,19 +1,35 @@
-<p-menubar>
-    <ng-template pTemplate="start">
+<div class="container-navbar flex justify-content-between">
+    <div class="containe-logo">
         <img routerLink="" src="/assets/logo/logo-real-black.png" height="40" width="85" class="p-mr-2" alt="brand logo">  
- 
-      </ng-template>
-      <ng-template pTemplate="end" class="flex">
-        <span class="p-input-icon-left">
-            <i class="pi pi-search"></i>
-            <input type="text" pInputText placeholder="Search" [(ngModel)]="value" />
-        </span>  
-        <app-header-connected *ngIf="user; else publicTemplate"></app-header-connected>
-        <ng-template #publicTemplate>
-        <app-header-public></app-header-public>
-    </ng-template>
-    </ng-template>
-</p-menubar>
+    </div>
+
+    <div class="container-tools flex">
+
+        <p-sidebar class="lg:hidden xl:hidden" [(visible)]="visibleSidebar5" position="bottom" [baseZIndex]="10000">
+            <div class="flex justify-content-center">
+                <app-header-connected *ngIf="user; else publicTemplate"></app-header-connected>
+                <ng-template #publicTemplate>
+                <app-header-public></app-header-public>
+                </ng-template>
+            </div>
+        </p-sidebar>
+
+        <p-button class="md:hidden lg:hidden xl:hidden" type="button" (click)="visibleSidebar5 = true" icon="pi pi-th-large"></p-button>
+
+        <div class="search-bar hidden md:block lg:block xl:block">
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText placeholder="Search" [(ngModel)]="value" />
+            </span>  
+        </div>
+        <div class="hidden md:block lg:block xl:block">
+            <app-header-connected *ngIf="user; else publicTemplate"></app-header-connected>
+            <ng-template #publicTemplate>
+            <app-header-public></app-header-public>
+            </ng-template>
+        </div>
+    </div>
+</div>
 
 
 

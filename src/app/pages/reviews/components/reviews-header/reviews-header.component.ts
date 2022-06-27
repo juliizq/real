@@ -14,6 +14,7 @@ export class ReviewsHeaderComponent implements OnInit, OnDestroy {
   user: User | undefined;
   value!: string;
   subscriptionUser!: Subscription;
+  visibleSidebar5: any;
 
   constructor(private authService : AuthService) { 
     this.subscriptionUser = this.authService.user.subscribe(x => this.user = x as User);
