@@ -17,6 +17,7 @@ import {CardModule} from 'primeng/card';
 import {AvatarModule} from 'primeng/avatar';
 import {RatingModule} from 'primeng/rating';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
+import {SidebarModule} from 'primeng/sidebar';
 
 
 
@@ -43,7 +44,8 @@ import {BreadcrumbModule} from 'primeng/breadcrumb';
     CardModule,
     AvatarModule,
     RatingModule,
-    BreadcrumbModule 
+    BreadcrumbModule,
+    SidebarModule
   ]
 })
 export class ReviewsModule { }
