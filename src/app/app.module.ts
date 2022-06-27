@@ -18,6 +18,9 @@ import {CardModule} from 'primeng/card';
 import {AvatarModule} from 'primeng/avatar';
 import {RatingModule} from 'primeng/rating';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import {ButtonModule} from 'primeng/button';
+import {SidebarModule} from 'primeng/sidebar';
 
 
 
@@ -29,6 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,
@@ -52,7 +56,9 @@ export function HttpLoaderFactory(http: HttpClient) {
       CardModule,
       AvatarModule,
       RatingModule,
-      BreadcrumbModule
+      BreadcrumbModule,
+      ButtonModule,
+      SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
