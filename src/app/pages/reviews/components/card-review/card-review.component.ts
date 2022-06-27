@@ -12,15 +12,15 @@ export class CardReviewComponent implements OnInit {
   value : number = 3;
 
   @Input() review!: Review;
-
   
+
   constructor() { }
 
-  
 
   ngOnInit(): void {
     
   }
+
 
   
 }
