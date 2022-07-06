@@ -36,10 +36,12 @@
         "success_message" : "If there's an account associated with the provided email, you'll receive an email with password reset instructions shortly."
     },
     "header" : { 
-        "how_it_works" : "HOW IT WORKS"
+        "how_it_works" : "HOW IT WORKS",
+        "get_started" : "Get started",
+        "login" : "Login"
     },
     "home_main" : {
         "subtitle" : "Discover reviews of clothes made by real bodies and find brands and sizes suitable for you!",
-        "start_now" : "Start now"
+        "go_to_reviews" : "Go to Reviews"
     }
 }

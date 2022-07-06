@@ -37,11 +37,13 @@
 
     },
     "header" : { 
-        "how_it_works" : "CÓMO FUNCIONA"
+        "how_it_works" : "CÓMO FUNCIONA",
+        "get_started" : "Registrarse",
+        "login" : "Ingresar"
         
     },
     "home_main" : {
         "subtitle" : "Descubre reseñas de ropa hecha por cuerpos reales y encuentra marcas y tallas adecuadas para ti!",
-        "start_now" : "Comenzar ahora"
+        "go_to_reviews" : "Ir a Reviews"
     }
 }
