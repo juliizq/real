@@ -22,11 +22,30 @@
         
     }
 
+
     .p-breadcrumb{
         font-weight: 500;
         padding: 0rem !important;
     }
 
+    p.title{
+        font-size: 1.4rem;
+        color: #1d1f22;
+        font-weight: 500;
+
+        .title-span{
+            color: #8628ff;
+        }
+    }
+
+    .p-dialog .p-dialog-header {
+        padding: 0.2rem 1rem;
+    }
+
+    .p-dialog .p-dialog-content {
+        padding: 0.2rem 1rem;
+    }
+   
 }
 
 

@@ -3,11 +3,13 @@ import { Subscription } from 'rxjs';
 import { Review } from 'src/app/models/review.model';
 import { ReviewService } from '../../services/review.service';
 import {MenuItem} from 'primeng/api';
+import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-reviews-main',
   templateUrl: './reviews-main.component.html',
-  styleUrls: ['./reviews-main.component.scss']
+  styleUrls: ['./reviews-main.component.scss'],
+  providers: [MessageService]
 })
 export class ReviewsMainComponent implements OnInit, OnDestroy {
 
@@ -17,7 +19,11 @@ export class ReviewsMainComponent implements OnInit, OnDestroy {
   reviews : Review[]  = [];
   subscription! : Subscription;
 
-  constructor( private reviewService : ReviewService) { }
+  event! : Event;
+
+  uploadedFiles: any[] = [];
+
+  constructor( private reviewService : ReviewService, private messageService: MessageService) { }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe()
@@ -26,18 +32,30 @@ export class ReviewsMainComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.getReviews();
     this.items = [
-      {label: 'T-SHIRT'},
       {label: 'ALL'}
       
     ];
   
-    this.home = {icon: 'pi pi-home'};
+    this.home = {icon: 'pi pi-home', routerLink : '/home'};
+  }
+
+  displayModal!: boolean;
+  showDialog() {
+    this.displayModal = true;
   }
 
   getReviews(){
     this.subscription = this.reviewService.getReviews().subscribe((reviews) => {
       this.reviews = reviews
     })
+  }
+
+  onUpload(event : any) {
+    for(let file of event.files) {
+        this.uploadedFiles.push(file);
+    }
+
+    this.messageService.add({severity: 'info', summary: 'File Uploaded', detail: ''});
   }
 
 }

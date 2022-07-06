@@ -18,7 +18,10 @@ import {AvatarModule} from 'primeng/avatar';
 import {RatingModule} from 'primeng/rating';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {SidebarModule} from 'primeng/sidebar';
-
+import {DialogModule} from 'primeng/dialog';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import {FileUploadModule} from 'primeng/fileupload';
 
 
 
@@ -45,7 +48,11 @@ import {SidebarModule} from 'primeng/sidebar';
     AvatarModule,
     RatingModule,
     BreadcrumbModule,
-    SidebarModule
+    SidebarModule,
+    DialogModule,
+    InputTextareaModule,
+    AutoCompleteModule,
+    FileUploadModule
   ]
 })
 export class ReviewsModule { }
