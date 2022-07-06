@@ -21,7 +21,9 @@ import {BreadcrumbModule} from 'primeng/breadcrumb';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import {ButtonModule} from 'primeng/button';
 import {SidebarModule} from 'primeng/sidebar';
-
+import {DialogModule} from 'primeng/dialog';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+import {FileUploadModule} from 'primeng/fileupload';
 
 
 // AoT requires an exported function for factories
@@ -58,7 +60,10 @@ export function HttpLoaderFactory(http: HttpClient) {
       RatingModule,
       BreadcrumbModule,
       ButtonModule,
-      SidebarModule
+      SidebarModule,
+      DialogModule,
+      AutoCompleteModule,
+      FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]
