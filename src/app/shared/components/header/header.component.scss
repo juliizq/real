@@ -1,46 +1,88 @@
 :host ::ng-deep {
-    .p-menubar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-weight: 400;
-        letter-spacing: 0.5px;
-        margin: 0.9rem 2.9rem !important; 
-        font-size: 1.1rem;
-    }
-
-    .p-menubar .p-menubar-custom, .p-menubar .p-menubar-end {
-        margin-left: inherit;
-        align-self: auto;
-        
-    }
 
     button.p-element.p-button-outlined.p-button.p-component {
         font-weight: 500 ;
     }
 
-    // @media only screen and (max-width: 960px) {
-    //     .p-menubar-end.ng-star-inserted{
-    //         display: none;
-    //     }
-    // }
 
     .container-navbar{
-        margin: 0.9rem 2.9rem !important; 
         font-size: 1.1rem;
         font-weight: 400;
         letter-spacing: 0.5px;
-        padding: 0.5rem 1rem;
+        min-width: 350px;
     }
 
     .list-menu-items{
-        list-style: none;
+
+        li{
+            list-style: none;
+            font-size: 2.4rem;
+            animation-name: focus-in-expand;
+            animation-duration: 0.7s;
+            animation-timing-function: ease;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: none;
+            cursor: pointer;
+        }
+
+        li:hover{
+            color: #9747ff;
+            transition: 0.3s;
+            
+        }
+
+      
     }
+
+    .header-auth-tools{
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+
+    .menu-items{
+        .list-menu{
+            li{
+                margin-right: 1.5rem;
+                cursor: pointer;
+            }
+
+            li:hover{
+                color: #494949;
+                transition: 0.2s;
+            }
+        }
+    }
+
+    .p-sidebar-content{
+        min-height: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .container-navbar {
+          margin: 0;
+          padding: 0;
+        }
+      }
 } 
 
 
 
 
 
+@keyframes focus-in-expand {
+    0%{
+      letter-spacing: -.5em;
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100%{
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
 
 
+  
