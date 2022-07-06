@@ -1,38 +1,30 @@
-<!-- <p-menubar [model]="items">
-    <ng-template pTemplate="start">
-        <img routerLink="" src="/assets/logo/logo-real-black.png" height="40" width="85" class="p-mr-2" alt="brand logo">    
-      </ng-template>
-      <ng-template pTemplate="end" class="container-ng-template">
-        <app-header-connected *ngIf="user; else publicTemplate"></app-header-connected>
-        <ng-template #publicTemplate>
-        <app-header-public></app-header-public>
-        </ng-template>
-    </ng-template>
-</p-menubar> -->
-
-
-
-<div class="container-navbar flex justify-content-between">
+<div class="container-navbar flex justify-content-between align-items-center">
   <div class="containe-logo">
       <img routerLink="" src="/assets/logo/logo-real-black.png" height="40" width="85" class="p-mr-2" alt="brand logo">  
   </div>
 
-  <div class="container-tools flex">
+  <div class="menu-items hidden md:block lg:block xl:block">
+    <ul class="list-menu flex list-none text-xl">
+      <li routerLink="">{{'header.how_it_works' | translate}}</li>
+      <li routerLink="/reviews">REVIEWS</li>
+    </ul>
+  </div>
 
+  <div class="container-tools flex">
       <p-sidebar class="lg:hidden xl:hidden" [(visible)]="visibleSidebar" [fullScreen]="true" [baseZIndex]="10000">
         <div class="flex justify-content-center flex-column">
-          <div class="menu-items">
+          <div class="menu-items-responsive">
             <ul class="list-menu-items">
               <li>HOW IT WORKS</li>
-              <li>REVIEWS</li>
+              <li routerLink="/reviews">REVIEWS</li>
             </ul>
           </div>
-            <div class="">
+          <div class="header-auth-tools">
                 <app-header-connected *ngIf="user; else publicTemplate"></app-header-connected>
                 <ng-template #publicTemplate>
                 <app-header-public></app-header-public>
                 </ng-template>
-            </div>
+          </div>
         </div>
       </p-sidebar>
 
