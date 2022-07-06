@@ -29,6 +29,18 @@ export class AuthService {
       this.user = this.userSubject.asObservable();
    }
 
+  register(firstName : string, lastName : string, email : string, password : string){
+    return this.httpClient.post(`${this.baseUrl}/register`, { firstName, lastName, email, password})
+    .pipe(
+      map((response : any) => {
+        localStorage.setItem('accessToken', response.accessToken);
+        this.userSubject.next(response.user);
+        this.startRefreshTokenTimer();
+        return response.user;
+      })
+    )
+  }
+
   login(email : string, password : string){
     return this.httpClient.post( `${this.baseUrl}/login` , { email, password }, { withCredentials: true })
     .pipe(

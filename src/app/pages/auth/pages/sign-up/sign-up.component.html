@@ -15,30 +15,30 @@
             <div class="logo"> <img src="/assets/logo/logo-real-black.png" height="40" width="85" class="p-mr-2" alt="brand logo"> </div>
 
             <div class="container-form flex justify-content-center flex-column align-items-center">
-                <div class="form-sign-up">
+                <form class="form-sign-up" [formGroup]="registerForm" (ngSubmit)="registerUser()">
                     <h3 class="text-2xl font-medium">{{'sign_up.sign_up' | translate}}</h3>
 
                     <p>{{'sign_up.first_name' | translate}}</p>
-                    <input type="text" pInputText >
+                    <input formControlName="firstName"  type="text" pInputText required >
 
                     <p>{{'sign_up.last_name' | translate}}</p>
-                    <input type="text" pInputText > 
+                    <input formControlName="lastName" type="text" pInputText required > 
 
                     <p>Email</p>
-                    <input type="text" pInputText >
+                    <input formControlName="email" type="email" pInputText required >
 
                     <p>{{'sign_up.password' | translate}}</p>
-                    <p-password styleClass="p-password p-component p-inputwrapper p-input-icon-right" [toggleMask]="true"></p-password>
+                    <p-password formControlName="password" styleClass="p-password p-component p-inputwrapper p-input-icon-right" [toggleMask]="true"></p-password>
 
                     <div class="container-button">
-                        <p-button  label="{{'sign_up.create_account' | translate}}"></p-button>
+                        <p-button [disabled]="!registerForm.valid" type="submit" label="{{'sign_up.create_account' | translate}}"></p-button>
                     </div>
 
                     <div class="container-login flex justify-content-end">
                         <a routerLink="/login" class="font-normal text-primary no-underline">{{'sign_up.have_account' | translate}}? <span class="underline">{{'sign_up.log_in' | translate}}</span></a>
                     </div>
                     
-                </div>
+                </form>
 
             </div>
         </div>
