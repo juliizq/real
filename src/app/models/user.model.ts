@@ -4,8 +4,6 @@ export class User{
     lastName!: string;
     email! : string;
     role!: string;
-    country! : string;
-    city! : string;
     totalReview! : number;
 
 
@@ -19,8 +17,6 @@ export class User{
         this.lastName = json.lastName;
         this.email = json.email;
         this.role = json.role;
-        this.country = json.country;
-        this.city = json.city;
         this.totalReview = json.totalReview;
     }
 }
